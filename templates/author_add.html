@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <form action="" method="post">
+        <p>作者姓名: <input type="text" name="author_name"></p>
+        <p>代表作：
+            <select name="book_ids" multiple >
+                {% for all_book in all_books %}
+                    <option value="{{ all_book.pk }}">{{ all_book.name }}</option>
+                {% endfor %}
+
+            </select>
+        </p>
+        <div class="form-group">
+            <button>提交</button>
+        </div>
+    </form>
+
+</body>
+</html>

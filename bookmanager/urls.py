@@ -17,10 +17,28 @@ from django.conf.urls import url
 from django.contrib import admin
 from appone import views
 
+
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^publisher_list/', views.publisher),
     url(r'^publisher_add/', views.add),
     url(r'^publisher_delete/', views.publisher_delete),
     url(r'^publisher_edit/', views.publisher_edit),
+
+
+
+    url(r'^book_list/', views.book_list),
+    url(r'^book_add/', views.book_add),
+    url(r'^book_del/', views.book_del),
+    url(r'^book_edit/', views.book_edit),
+
+
+
+    url(r'^author_list/', views.author_list),
+    url(r'^author_add/', views.author_add),
+    url(r'^author_del/', views.author_del),
+    url(r'^author_edit/', views.author_edit),
+
+
+
 ]
